@@ -1,0 +1,16 @@
+.inputbox input{
+    width: 450px;
+    height: 40px;
+    border-radius: 15px;
+    font-size: 15px;
+    font-family: 'Kanit';
+    stroke-width: 3px;
+    stroke-color: #dcdcdc;
+    padding: 0px 10px;
+}
+
+.inputbox p {
+    margin: 10px 15px;
+    font-size: 18px;
+    font-family: 'Kanit', sans-serif;
+}

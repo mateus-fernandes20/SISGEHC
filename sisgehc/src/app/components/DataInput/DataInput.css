@@ -1,0 +1,12 @@
+.selectdatabox p{
+    font-family: 'Kanit', sans-serif;
+    font-size: 20px;
+}
+
+.selectdatabox input {
+    width: 200px;
+    height: 40px;
+    border: 3px solid #dbdbdb;
+    border-radius: 15px;
+    padding: 0px 5px;
+}

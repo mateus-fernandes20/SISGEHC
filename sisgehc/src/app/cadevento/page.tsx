@@ -1,6 +1,7 @@
 import Input from "../components/Input/Input";
 import Button from "../components/Button/Button";
 import Select from "../components/Select/Select";
+import DataInput from "../components/DataInput/DataInput";
 import "./style.css"
 
 export default function cadevento() {
@@ -10,19 +11,19 @@ export default function cadevento() {
       <h4>Cadastro de Evento</h4>
       </div>
       <div>
-        <div className="colunaDireita">
+        <div className="colunaEsquerda">
           <Input placeholder={"Adicione um nome"} text={"Nome do evento"}></Input>
           <Select></Select>
           <Input id="texto" placeholder="Descreva seu evento" text="Descrição do evento"></Input>
           <Button text={"Voltar"} color={""} ></Button>
         </div>
-        <div className="colunaEsquerda">
+        <div className="colunaDireita">
           <Input placeholder="Professor, Grupo, Laboratório ou Movimento" text="Responsavel pelo evento"></Input>
           <Input placeholder={"Adicione um local"} text={"Local"}></Input>
           <Input placeholder={"Adicione um curso"} text={"Curso"}></Input>
           <div>
             <div>
-              
+              <DataInput></DataInput>
             </div>
             <div></div>
           </div>

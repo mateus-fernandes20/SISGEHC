@@ -2,6 +2,7 @@ import Input from "../components/Input/Input";
 import Button from "../components/Button/Button";
 import Select from "../components/Select/Select";
 import DataInput from "../components/DataInput/DataInput";
+import TextArea from "../components/TextArea/TextArea";
 import "./style.css"
 
 export default function cadevento() {
@@ -10,24 +11,32 @@ export default function cadevento() {
       <div className="titulo">
       <h4>Cadastro de Evento</h4>
       </div>
-      <div>
-        <div className="colunaEsquerda">
+      <div className="frame">
+        <div className="coluna">
           <Input placeholder={"Adicione um nome"} text={"Nome do evento"}></Input>
           <Select></Select>
-          <Input id="texto" placeholder="Descreva seu evento" text="Descrição do evento"></Input>
-          <Button text={"Voltar"} color={""} ></Button>
+          <TextArea placeholder="Descreva seu evento" text="Descrição do evento"></TextArea>
+          <div id="buttonDivLeft">
+            <Button text={"Voltar"} color={""} ></Button>
+          </div>
         </div>
-        <div className="colunaDireita">
+        <div className="coluna">
           <Input placeholder="Professor, Grupo, Laboratório ou Movimento" text="Responsavel pelo evento"></Input>
           <Input placeholder={"Adicione um local"} text={"Local"}></Input>
           <Input placeholder={"Adicione um curso"} text={"Curso"}></Input>
-          <div>
+          <div className="frame">
             <div>
-              <DataInput></DataInput>
+              <DataInput text="Data de início"></DataInput>
+              <DataInput text="Início das inscrições"></DataInput>
             </div>
-            <div></div>
+            <div>
+              <DataInput text="Data de termino"></DataInput>
+              <DataInput text="Data limíte de inscrições"></DataInput>
+            </div>
           </div>
-          <Button text="Salvar" color="btn-verde"></Button>
+          <div id="buttonDivRight">
+            <Button text="Salvar" color="btn-verde"></Button>
+          </div>
         </div>
       </div>
       </>

@@ -10,5 +10,10 @@ export interface buttonProps{
 }
 
 export interface selectProps{
-    
+    text: string;
+}
+
+export interface textProps{
+    placeholder: string;
+    text: string;
 }

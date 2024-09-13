@@ -12,14 +12,14 @@
 }
 
 .inputbox p {
-    margin: 10px 15px;
+    margin: 5px 10px;
     font-size: 18px;
     font-family: 'Kanit', sans-serif;
 }
 
 .inputbox #texto {
     width: 450px;
-    height: 200px;
+    height: 220px;
     border-radius: 15px;
     font-size: 15px;
     font-family: 'Kanit';
@@ -28,4 +28,8 @@
     background-color: #f9f9f9;
     padding: 0px 10px;
     text-align: start;
+}
+
+.inputbox {
+    margin: 10px 0px;
 }

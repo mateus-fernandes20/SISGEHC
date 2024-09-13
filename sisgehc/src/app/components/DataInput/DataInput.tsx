@@ -1,11 +1,11 @@
-import { buttonProps } from '@/types'
+import { selectProps } from '@/types'
 import React from 'react'
 import "./DataInput.css"
 
-const DataInput = () => {
+const DataInput = ({text}: selectProps) => {
     return (
       <div className='selectdatabox'>
-        <p>Início do evento</p>
+        <p>{text}</p>
           <input placeholder="Escolha uma data" type="data" id="data" name="data"/><br/>
       </div>
     )

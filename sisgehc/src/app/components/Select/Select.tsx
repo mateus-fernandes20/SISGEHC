@@ -7,9 +7,12 @@ const Select = () => {
       <div className='selectbox'>
         <p>Tipo de Hora Complementar</p>
           <select name="Categoria" id="selectCat">
-            <option value="cat1">Categoria 1</option>
-            <option value="cat2">Categoria 2</option>
-            <option value="cat3">Categoria 3</option>
+            <option value="tipoA">A - Complementação de formação específica ou profissional</option>
+            <option value="tipoB">B - Atividades de Ensino</option>
+            <option value="tipoC">C - Pesquisa e produção científica</option>
+            <option value="tipoD">D - Atividades acadêmicas gerais</option>
+            <option value="tipoE">E - Atividades de Extensão</option>
+            <option value="tipoF">F - Atividades Esportivas e Culturais</option>
           </select>
       </div>
     )

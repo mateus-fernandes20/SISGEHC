@@ -1,0 +1,18 @@
+:root {
+    font-family: 'Kanit', sans-serif;
+    font-size: 20px;
+}
+
+h4 {
+    font-family: 'Kanit', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.titulo {
+    text-align: center;
+}
+
+div {
+    margin: 5px 10px;
+}

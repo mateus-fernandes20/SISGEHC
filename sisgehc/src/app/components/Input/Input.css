@@ -5,12 +5,27 @@
     font-size: 15px;
     font-family: 'Kanit';
     stroke-width: 3px;
-    stroke-color: #dcdcdc;
+    border-color: #dbdbdb;
+    background-color: #f9f9f9;
     padding: 0px 10px;
+    text-align: left;
 }
 
 .inputbox p {
     margin: 10px 15px;
     font-size: 18px;
     font-family: 'Kanit', sans-serif;
+}
+
+.inputbox #texto {
+    width: 450px;
+    height: 200px;
+    border-radius: 15px;
+    font-size: 15px;
+    font-family: 'Kanit';
+    stroke-width: 3px;
+    border-color: #dbdbdb;
+    background-color: #f9f9f9;
+    padding: 0px 10px;
+    text-align: start;
 }

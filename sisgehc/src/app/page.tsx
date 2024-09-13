@@ -5,7 +5,6 @@ export default function Home() {
     <>
     <h1>Olá, está funcionando =D</h1>
     <p>são amores</p>
-    <Footer></Footer>
     </>
   );
 }

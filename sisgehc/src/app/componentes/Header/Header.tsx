@@ -1,0 +1,43 @@
+import headerProps from '@/types';
+import './Header.css'
+import Image from 'next/image';
+
+
+const Header = ({isLoginScreen}:headerProps) =>{
+    if(isLoginScreen)
+    {
+        //Se o sistema estiver logado, o header aparecerá assim
+        return(
+            <header className='cabecalho'>
+                <div className='cabecalho__container1'>
+                    <p className='cabecalho__t1'>SISGEHC</p>
+                    <div>
+                        <p className='cabecalho__t2'>Sistemade Gerenciamento de Horas</p>
+                        <p className='cabecalho__t2'>Complementares</p>
+                    </div>
+                </div>
+                <div className='cabecalho__container2'>
+                    <p className='cabecalho__t1'>Aluno</p>
+                    <p className='cabecalho__t2'>Perfil do Aluno</p>
+                </div>
+            </header>
+        );
+    }
+    else
+    {
+        //Se não estiver logado, vai aparecer assim 
+        return(
+            <header className='cabecalho'>
+                <div className='cabecalho__container1'>
+                    <Image src='./images/LogoUece.svg' alt='Logo UECE'  width={436} height={135}/>
+                </div>
+                <div className='cabecalho__container2'>
+                    <p className='cabecalho__t1'>Aluno</p>
+                    <p className='cabecalho__t2'>Perfil do Aluno</p>
+                </div>
+            </header>
+        );
+    }
+}
+
+export default Header

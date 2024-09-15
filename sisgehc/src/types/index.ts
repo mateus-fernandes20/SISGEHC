@@ -1,3 +1,7 @@
+export default interface headerProps{
+    isLoginScreen?: boolean; 
+}
+
 export interface inputProps{
     id?: string;
     placeholder: string;

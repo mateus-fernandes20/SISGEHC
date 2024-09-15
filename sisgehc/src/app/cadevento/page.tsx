@@ -3,11 +3,14 @@ import Button from "../components/Button/Button";
 import Select from "../components/Select/Select";
 import DataInput from "../components/DataInput/DataInput";
 import TextArea from "../components/TextArea/TextArea";
+import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
 import "./style.css"
 
 export default function cadevento() {
     return (
       <>
+      <Header isLoginScreen></Header>
       <div className="titulo">
       <h4>Cadastro de Evento</h4>
       </div>
@@ -39,6 +42,7 @@ export default function cadevento() {
           </div>
         </div>
       </div>
+      <Footer></Footer>
       </>
     );
   }

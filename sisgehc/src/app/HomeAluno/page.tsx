@@ -1,5 +1,5 @@
-import Footer from '../componentes/Footer/Footer'
-import Header from '../componentes/Header/Header'
+import Footer from '../components/DataInput/Footer/Footer'
+import Header from '../components/Header/Header'
 
 export default function HomeAluno() {
 

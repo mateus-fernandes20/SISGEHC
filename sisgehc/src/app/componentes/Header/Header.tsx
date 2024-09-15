@@ -12,7 +12,7 @@ const Header = ({isLoginScreen}:headerProps) =>{
                 <div className='cabecalho__container1'>
                     <p className='cabecalho__t1'>SISGEHC</p>
                     <div>
-                        <p className='cabecalho__t2'>Sistemade Gerenciamento de Horas</p>
+                        <p className='cabecalho__t2'>Sistema de Gerenciamento de Horas</p>
                         <p className='cabecalho__t2'>Complementares</p>
                     </div>
                 </div>

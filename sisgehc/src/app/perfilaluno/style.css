@@ -1,0 +1,22 @@
+.perfil__container{
+    display: flex;
+    
+}
+
+.perfil__image{
+    margin: auto;
+}
+
+
+.perfil__informacao{
+    color:  var( --cinza-fonte);
+    font-family: var(--kanit);
+    font-size: 30px;
+    margin: auto;
+}
+
+.perfil__button{
+    margin-top: 250px;
+    margin-left: 230px;
+}
+

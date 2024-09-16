@@ -4,8 +4,7 @@
     border-radius: 15px;
     font-size: 15px;
     font-family: 'Kanit';
-    stroke-width: 3px;
-    border-color: #dbdbdb;
+    border: 3px solid #d9d9d9;
     background-color: #f9f9f9;
     padding: 0px 10px;
     text-align: left;
@@ -23,8 +22,6 @@
     border-radius: 15px;
     font-size: 15px;
     font-family: 'Kanit';
-    stroke-width: 3px;
-    border-color: #dbdbdb;
     background-color: #f9f9f9;
     padding: 0px 10px;
     text-align: start;

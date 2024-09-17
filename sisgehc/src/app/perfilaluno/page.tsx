@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react'
-import Footer from '../components/DataInput/Footer/Footer'
+import Footer from '../components/Footer/Footer'
 import Header from '../components/Header/Header'
 import Image from 'next/image'
 import './style.css'
@@ -45,7 +45,7 @@ const page = () => {
 
   return (
     <>
-    <Header/>
+    <Header isLoginScreen/>
     <div className='perfil__container'>
         <div className='perfil__image'>
             <Image
@@ -58,7 +58,7 @@ const page = () => {
         {/* Informações sobre o aluno  */}
                 
             <div className='perfil__informacao'>
-                <h1>{data[0].nome}</h1>
+                <h1>Nome Fulano de Tal{data[0].nome}</h1>
                 <p>Matricula : {data[0].matricula}</p>
                 <p>Horas complementares: {data[0].horasComplementares}</p>
                 <p>Curso : {data[0].curso}</p>

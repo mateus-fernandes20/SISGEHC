@@ -11,7 +11,7 @@
 .perfil__informacao{
     color:  var( --cinza-fonte);
     font-family: var(--kanit);
-    font-size: 30px;
+    font-size: 18px;
     margin: auto;
 }
 

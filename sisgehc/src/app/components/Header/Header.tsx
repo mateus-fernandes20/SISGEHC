@@ -32,8 +32,9 @@ const Header = ({isLoginScreen}:headerProps) =>{
                     <Image src='./images/LogoUece.svg' alt='Logo UECE'  width={436} height={135}/>
                 </div>
                 <div className='cabecalho__container2'>
-                    <p className='cabecalho__t1'>Aluno</p>
-                    <p className='cabecalho__t2'>Perfil do Aluno</p>
+                    <p className='cabecalho__t1'>SISGEHC</p>
+                    <p className='cabecalho__t2'>Sistema de Gerenciamento de Horas</p>
+                    <p className='cabecalho__t2'>Complementares</p>
                 </div>
             </header>
         );

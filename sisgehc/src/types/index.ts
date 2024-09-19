@@ -11,6 +11,8 @@ export interface inputProps{
 export interface buttonProps{
     text: string;
     color: string;
+    h: string;
+    w: string;
 }
 
 export interface selectProps{
@@ -20,4 +22,16 @@ export interface selectProps{
 export interface textProps{
     placeholder: string;
     text: string;
+}
+
+export interface Evento{
+    id: number;
+    nome: string;
+    professor: number;
+    dataInicio: string;
+    dataFim: string;
+    horaInicio: string; 
+    horaFim: string;
+    descricao: string;
+    imagem: string;
 }

@@ -6,7 +6,7 @@ const DataInput = ({text}: selectProps) => {
     return (
       <div className='selectdatabox'>
         <p>{text}</p>
-          <input placeholder="Escolha uma data" type="data" id="data" name="data"/><br/>
+          <input placeholder="Escolha uma data" type="date" id="data" name="data"/><br/>
       </div>
     )
 }

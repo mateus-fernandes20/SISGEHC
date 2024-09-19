@@ -34,10 +34,21 @@ export interface textProps{
     onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
 }
 
+export interface Evento{
+    id: number;
+    nome: string;
+    professor: number;
+    dataInicio: string;
+    dataFim: string;
+    horaInicio: string; 
+    horaFim: string;
+    descricao: string;
+    imagem: string;
+}
+
 export interface inputFileProps {
     id?: string;
     name: string;
     text: string;
-    
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }

@@ -5,7 +5,7 @@ import "./Button.css"
 const Button = ({text, color}: buttonProps) => {
     return (
       <div className='buttonbox'>
-          <button className={color}>{text}</button>
+          <button type='submit' className={color}>{text}</button>
       </div>
     )
 }

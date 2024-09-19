@@ -12,7 +12,7 @@ import TimeInput from "../components/TimeInput/TimeInput";
 export default function cadevento() {
     return (
       <>
-      <Header isLoginScreen></Header>
+      <Header></Header>
       <div className="titulo">
       <h4>Cadastro de Evento</h4>
       </div>

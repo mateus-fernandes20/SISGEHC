@@ -1,9 +1,18 @@
+'use client'
 import headerProps from '@/types';
 import './Header.css'
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 
 const Header = ({isLoginScreen}:headerProps) =>{
+
+    const router = useRouter();
+
+    const handleAlunopage = () => {
+        router.push('/perfilaluno');
+    }
+
     if(isLoginScreen)
     {
         //Se o sistema estiver logado, o header aparecerá assim
@@ -16,7 +25,7 @@ const Header = ({isLoginScreen}:headerProps) =>{
                         <p className='cabecalho__t2'>Complementares</p>
                     </div>
                 </div>
-                <div className='cabecalho__container2'>
+                <div className='cabecalho__container2' onClick={handleAlunopage}>
                     <p className='cabecalho__t1'>Aluno</p>
                     <p className='cabecalho__t2'>Perfil do Aluno</p>
                 </div>

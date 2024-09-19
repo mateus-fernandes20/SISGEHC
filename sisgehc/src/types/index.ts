@@ -21,3 +21,9 @@ export interface textProps{
     placeholder: string;
     text: string;
 }
+
+export interface inputFileProps {
+    id?: string;
+    name: string;
+    text: string;
+}

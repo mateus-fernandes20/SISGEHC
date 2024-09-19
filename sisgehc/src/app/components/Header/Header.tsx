@@ -1,4 +1,5 @@
 'use client'
+'use client'
 import headerProps from '@/types';
 import './Header.css'
 import Image from 'next/image';

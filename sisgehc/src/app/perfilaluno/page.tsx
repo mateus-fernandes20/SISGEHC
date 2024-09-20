@@ -16,7 +16,7 @@ const page = () => {
         router.push('/HomeAluno');
     }
 
-    const [data, setData] = useState<any[]>([]); // Estado para armazenar os dados
+  const [data, setData] = useState<any[]>([]); // Estado para armazenar os dados
   const [loading, setLoading] = useState(true); // Estado para controlar o carregamento
 
   useEffect(() => {
@@ -58,7 +58,7 @@ const page = () => {
         {/* Informações sobre o aluno  */}
                 
             <div className='perfil__informacao'>
-                <h1>Nome Fulano de Tal{data[0].nome}</h1>
+                <h1>{data[0].nome}</h1>
                 <p>Matricula : {data[0].matricula}</p>
                 <p>Horas complementares: {data[0].horasComplementares}</p>
                 <p>Curso : {data[0].curso}</p>

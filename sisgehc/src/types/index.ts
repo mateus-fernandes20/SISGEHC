@@ -38,6 +38,7 @@ export interface Evento{
     id: number;
     nome: string;
     professor: number;
+    responsavel: string;
     dataInicio: string;
     dataFim: string;
     horaInicio: string; 

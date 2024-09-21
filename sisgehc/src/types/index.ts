@@ -6,8 +6,9 @@ export interface inputProps{
     id?: string;
     placeholder: string;
     text: string;
-    value: string;
-    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    value?: string;
+    type?: string;
+    onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export interface buttonProps{

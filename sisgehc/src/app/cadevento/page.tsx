@@ -10,8 +10,22 @@ import Footer from "../components/Footer/Footer";
 import InputFile from "../components/InputFile/InputFile";
 import TimeInput from "../components/TimeInput/TimeInput";
 import "./style.css";
+import ModalQrcode from '../components/ModalQrcode/modalQrcode';
+import Image from 'next/image';
 
 export default function cadevento() {
+
+  // link imagem qrcode
+
+  const qrcodeUrl = "./images/Qrcode.svg"; 
+
+  //modal
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const toggleModal = () => {
+    setIsModalVisible(!isModalVisible);
+  };
+
+
   // Estados para armazenar os valores dos inputs
   const [nomeEvento, setNomeEvento] = useState('');
   const [horasEvento, setHorasEvento] = useState('');
@@ -100,6 +114,20 @@ export default function cadevento() {
             text="Logo do evento"
             onChange={(e) => setLogoEvento(e.target.files[0])} // Para arquivos
           />
+          <button className='button-qrcode' onClick={toggleModal}>QR-code</button>
+          <ModalQrcode isVisible={isModalVisible} onClose={toggleModal}>
+            <Image
+             src={qrcodeUrl}
+             alt='imagem qrcode'
+             width={500}
+             height={500}/>
+
+            <a href={qrcodeUrl} download="QrcodeEvento.svg">
+            
+                Baixar QrCode
+
+            </a>
+          </ModalQrcode>
           <div id="buttonDivLeft">
             <Button text="Voltar" color="" />
           </div>

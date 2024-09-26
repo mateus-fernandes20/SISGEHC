@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Input from "../components/Input/Input";
 import Button from "../components/Button/Button";
 import Select from "../components/Select/Select";
@@ -9,22 +9,17 @@ import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import InputFile from "../components/InputFile/InputFile";
 import TimeInput from "../components/TimeInput/TimeInput";
-import "./style.css";
 import ModalQrcode from '../components/ModalQrcode/modalQrcode';
-import Image from 'next/image';
+import { QRCodeCanvas } from 'qrcode.react';
+import "./style.css";
 
-export default function cadevento() {
-
-  // link imagem qrcode
-
-  const qrcodeUrl = "./images/Qrcode.svg"; 
+export default function Cadevento() {
 
   //modal
   const [isModalVisible, setIsModalVisible] = useState(false);
   const toggleModal = () => {
     setIsModalVisible(!isModalVisible);
   };
-
 
   // Estados para armazenar os valores dos inputs
   const [nomeEvento, setNomeEvento] = useState('');
@@ -39,6 +34,33 @@ export default function cadevento() {
   const [dataFim, setDataFim] = useState('');
   const [horaFim, setHoraFim] = useState('');
 
+  // parametros usados para a geracao do qrcode
+  const qrCodeData = JSON.stringify({
+    nomeEvento,
+    horasEvento,
+    descricaoEvento,
+    responsavel,
+    local,
+    curso,
+    dataInicio,
+    horaInicio,
+    dataFim,
+    horaFim,
+  });
+
+  const canvasRef = useRef(null);
+
+  const downloadQrCodeAsJpg = () => {
+    const canvas = canvasRef.current.querySelector('canvas');
+    if (canvas) {
+      const dataUrl = canvas.toDataURL('image/jpeg');
+      const link = document.createElement('a');
+      link.href = dataUrl;
+      link.download = 'QrcodeEvento.jpg';
+      link.click();
+    }
+  };
+
   // Função para enviar os dados via POST
   const handleSubmit = async (e:any) => {
     e.preventDefault();
@@ -51,7 +73,7 @@ export default function cadevento() {
     if (logoEvento) {
       formData.append('imagem', logoEvento); 
     }
-    formData.append('professor', 'professor')
+    formData.append('professor', 'professor');
     formData.append('responsavel', responsavel);
     formData.append('local', local);
     formData.append('curso', curso);
@@ -62,9 +84,8 @@ export default function cadevento() {
 
     // Usando forEach para depurar o FormData
     formData.forEach((value, key) => {
-    console.log(`${key}: ${value}`);
-  });
-
+      console.log(`${key}: ${value}`);
+    });
 
     try {
       const response = await fetch('http://127.0.0.1:8000/eventos/', {
@@ -116,17 +137,20 @@ export default function cadevento() {
           />
           <button className='button-qrcode' onClick={toggleModal}>QR-code</button>
           <ModalQrcode isVisible={isModalVisible} onClose={toggleModal}>
-            <Image
-             src={qrcodeUrl}
-             alt='imagem qrcode'
-             width={500}
-             height={500}/>
-
-            <a href={qrcodeUrl} download="QrcodeEvento.svg">
-            
-                Baixar QrCode
-
-            </a>
+            {}
+            <div ref={canvasRef} className="qrcode-container">
+              <QRCodeCanvas
+                value={qrCodeData}
+                size={256}
+                bgColor={"#ffffff"}
+                fgColor={"#000000"}
+                level={"L"}
+                includeMargin={true}
+              />
+            </div>
+            <div className="button-container">
+              <button onClick={downloadQrCodeAsJpg}>Baixar QR Code como JPG</button>
+            </div>
           </ModalQrcode>
           <div id="buttonDivLeft">
             <Button text="Voltar" color="" />

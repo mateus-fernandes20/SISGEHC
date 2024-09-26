@@ -23,6 +23,19 @@ h4 {
     margin: auto;
 }
 
+.qrcode-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
 #buttonDivRight {
     text-align: right;
     position: bottom;

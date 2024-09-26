@@ -1,13 +1,11 @@
 .rodape{
     background-color: var(--verde);
-    width: 97%;
+    width: 97.1%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100px;
-    padding: 0 2em;
-    position: fixed;
-    top: 88%
+    padding: 0 1.8em;
 }
 
 .rodape__texto{

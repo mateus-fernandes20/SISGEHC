@@ -11,7 +11,7 @@ export default function login() {
       <div className="coluna">
         <p className="loginText">Login</p>
         <Input text="Matrícula" placeholder={"Digite sua matrícula"}></Input>
-        <Input text="Senha" placeholder="Digite sua senha"></Input>
+        <Input id="password" text="Senha" placeholder="Digite sua senha" type="password" />
         <Button text={"Entrar"} color={"btn-verdeg"}></Button>
       </div>
       <div className="coluna">

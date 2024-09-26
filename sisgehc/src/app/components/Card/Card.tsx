@@ -3,10 +3,12 @@ import './Card.css';
 import Image from 'next/image';
 import { Fragment, useEffect, useState } from 'react';
 import { Evento } from '@/types';
+import {format} from 'date-fns';
+import {ptBR} from 'date-fns/locale';
 
 function Card() {
-  const [data, setData] = useState<any[]>([]); // Estado para armazenar os dados
-  const [loading, setLoading] = useState(true); // Estado para controlar o carregamento
+  const [data, setData] = useState<any[]>([]); 
+  const [loading, setLoading] = useState(true); 
 
   useEffect(() => {
     // Função para buscar os dados
@@ -20,18 +22,20 @@ function Card() {
         
         console.error('Erro ao buscar dados:', error);
       } finally {
-        setLoading(false); // Finaliza o estado de carregamento
+        setLoading(false); 
       }
     };
 
     fetchData();
-  }, []); // O array vazio faz com que useEffect execute apenas uma vez ao montar o componente
+  }, []); 
 
   if (loading) {
-    return <p>Carregando...</p>; // Mensagem enquanto os dados estão sendo carregados
+    return <p>Carregando...</p>; 
   }
 
   return (
+  <>
+    <p className='page__titulo'>Eventos Disponíveis</p>
     <div className='cards'>
       {data.map((item: Evento) => (
         <Fragment key={item.id}>
@@ -43,13 +47,13 @@ function Card() {
 
             <div className="card__informacoes">
                 <div>
-                        <p>De {item.dataInicio} até {item.dataFim}</p>
-                        <p>{item.professor === 2 ? 'Paulo Henrique' : 'Mateus Paixão'}</p>
+                        <p>De {format(new Date(item.dataInicio), "dd 'de' MMMM", {locale: ptBR })} até {format(new Date(item.dataFim), "dd 'de' MMMM", {locale: ptBR })}</p>
+                        <p>{item.responsavel}</p>
                         <p>{item.horaInicio} - {item.horaFim}</p>
                 </div>
-                <div>
-                        <p>Realização:</p>
-                        <p>{item.descricao}</p>
+                <div className='ajuste__texto'>
+                        <p>Descrição:</p>
+                        <p className='ajuste__texto2'>{item.descricao}</p>
                 </div>
                 <button className='card__button'>Se inscrever</button>
              </div>
@@ -57,6 +61,7 @@ function Card() {
         </Fragment>
       ))}
     </div>
+  </>
   );
 }
 

@@ -129,7 +129,7 @@ export default function cadevento() {
             </a>
           </ModalQrcode>
           <div id="buttonDivLeft">
-            <Button text="Voltar" color="" />
+            <Button text="Voltar" color="" pagina="/HomeProfessor"/>
           </div>
         </div>
         <div className="coluna">
@@ -178,7 +178,7 @@ export default function cadevento() {
             </div>
           </div>
           <div id="buttonDivRight">
-            <Button text="Salvar" color="btn-verde"  />
+            <Button text="Salvar" color="btn-verde" pagina="/HomeProfessor"/>
           </div>
         </div>
       </form>

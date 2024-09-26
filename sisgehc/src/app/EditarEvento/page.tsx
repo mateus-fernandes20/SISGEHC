@@ -20,8 +20,8 @@ export default function cadevento() {
           <Select></Select>
           <TextArea placeholder="Descreva seu evento" text="Descrição do evento"></TextArea>
           <div id="buttonDivLeft">
-            <Button text={"Voltar"} color={""} ></Button>
-            <Button text="Deletar" color="btn-vermelho"></Button>
+            <Button text={"Voltar"} color={""} pagina="/HomeProfessor"></Button>
+            <Button text="Deletar" color="btn-vermelho" pagina="/HomeProfessor"></Button>
           </div>
         </div>
         <div className="coluna">
@@ -39,7 +39,7 @@ export default function cadevento() {
             </div>
           </div>
           <div id="buttonDivRight">
-            <Button text="Salvar" color="btn-verde"></Button>
+            <Button text="Salvar" color="btn-verde" pagina="/HomeProfessor"></Button>
           </div>
         </div>
         <Footer></Footer>

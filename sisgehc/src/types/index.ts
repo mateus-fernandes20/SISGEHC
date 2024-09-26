@@ -14,6 +14,7 @@ export interface inputProps{
 export interface buttonProps{
     text: string;
     color: string;
+    pagina: string;
 }
 
 export interface selectProps{

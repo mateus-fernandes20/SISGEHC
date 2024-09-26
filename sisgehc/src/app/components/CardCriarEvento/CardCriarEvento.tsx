@@ -11,7 +11,7 @@ export default function criarEvento() {
     }
 
     return (
-        <div className="card__container">
+        <div className="card__container" onClick={handleProfessorHome}>
             <div>
                 <button id='botao_criar' onClick={handleProfessorHome}>+</button>
                 <p>Criar Evento</p>

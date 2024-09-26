@@ -1,10 +1,20 @@
+'use client'
+
 import Footer from './components/Footer/Footer'
+import Header from './components/Header/Header';
+import Button from './components/Button/Button';
+import './style.css'
 
 export default function Home() {
   return (
     <>
-    <h1>Olá, está funcionando =D</h1>
-    <p>são amores</p>
+      <Header/>
+      <div className="login__container">
+        <p className='mainPage__title'>Quem está Acessando?</p>
+        <Button color='btn-verdeg' text='Professor' pagina='/HomeProfessor'></Button>
+        <Button color='btn-verdeg' text='Aluno'pagina='HomeAluno'></Button>
+      </div>
+      <Footer/>
     </>
   );
 }

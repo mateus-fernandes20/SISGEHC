@@ -45,34 +45,29 @@ const page = () => {
 
   return (
     <>
-    <Header isLoginScreen/>
-    <div className='perfil__container'>
-        <div className='perfil__image'>
-            <Image
-                src="./images/imagemPerfil.svg"
-                alt='imagem default perfil'
-                width={256}
-                height={256}/>
+      <Header isLoginScreen/>
+      <div className='perfil__container'>
+          
+              <div className='perfil__informacao'>
+                  <h1>{data[0].nome}</h1>
+                  <p>Matricula : {data[0].matricula}</p>
+                  <p>Horas complementares: {data[0].horasComplementares}</p>
+                  <p>Curso : {data[0].curso}</p>
+                  <a href="https://www.google.com/url?q=https://www.uece.br/fafidam/wp-content/uploads/sites/35/2024/07/RES-5034-CEPE-atividades-complementares-2-2.pdf&sa=U&ved=2ahUKEwiM9_r1vuWHAxUgO7kGHf1ZMcQQFnoECC8QAQ&usg=AOvVaw3KotDNNUJNcCo_hJAbdv2E">informações horas complementares</a>
+                  <div className='perfil__button' onClick={handleButtonClick} >
+                      <Button color='' text='Voltar'/>
+                      <Button color='btn-vermelho' text='Sair' pagina='/'/>
+                  </div>
+              </div>
+              <Image
+                  src="./images/imagemPerfil.svg"
+                  alt='imagem default perfil'
+                  width={256}
+                  height={256}/>
 
-        </div>
-        {/* Informações sobre o aluno  */}
-                
-            <div className='perfil__informacao'>
-                <h1>{data[0].nome}</h1>
-                <p>Matricula : {data[0].matricula}</p>
-                <p>Horas complementares: {data[0].horasComplementares}</p>
-                <p>Curso : {data[0].curso}</p>
-                <a href="https://www.google.com/url?q=https://www.uece.br/fafidam/wp-content/uploads/sites/35/2024/07/RES-5034-CEPE-atividades-complementares-2-2.pdf&sa=U&ved=2ahUKEwiM9_r1vuWHAxUgO7kGHf1ZMcQQFnoECC8QAQ&usg=AOvVaw3KotDNNUJNcCo_hJAbdv2E">informações horas complementares</a>
-            
-            </div>
-
-            
-    </div>
-
-            <div className='perfil__button' onClick={handleButtonClick} >
-                <Button color='' text='Voltar'/>
-            </div>
-       <Footer/>
+          
+      </div>
+      <Footer/>
     </>
   )
 }

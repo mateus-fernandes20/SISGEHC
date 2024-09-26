@@ -5,11 +5,45 @@ import { Fragment, useEffect, useState } from 'react';
 import { Evento } from '@/types';
 import {format} from 'date-fns';
 import {ptBR} from 'date-fns/locale';
+import {Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, useDisclosure} from "@nextui-org/modal";
 
 function Card() {
   const [data, setData] = useState<any[]>([]); 
   const [loading, setLoading] = useState(true); 
+  const [idEvento, setIdEvento] = useState<number | null>();
 
+  
+  const handleSubmit = async () => {
+    
+    const formData = new FormData();
+    formData.append('evento', idEvento);
+    formData.append('Aluno', 8 );
+
+    try {
+      const response = await fetch('http://127.0.0.1:8000/inscricao/', {
+        method: 'POST',
+        body: formData,
+      });
+      
+      if (response.ok) {
+        const result = await response.json();
+        console.log('Inscrição realizada com sucesso', result);
+        alert("Inscrição Realizada com sucesso :)");
+      } else {
+        console.error('Erro ao inscrever Aluno:', response.statusText);
+        alert("Erro ao inscrever Aluno");
+      }
+    } catch (error) {
+      console.error('Erro na requisição:', error);
+    }
+  }
+
+  function sendIdEvento(id: number){
+    setIdEvento(id)
+    console.log(id)
+    handleSubmit()
+  }
+  
   useEffect(() => {
     // Função para buscar os dados
     const fetchData = async () => {
@@ -25,14 +59,14 @@ function Card() {
         setLoading(false); 
       }
     };
-
+    
     fetchData();
   }, []); 
-
+  
   if (loading) {
     return <p>Carregando...</p>; 
   }
-
+  
   return (
   <>
     <p className='page__titulo'>Eventos Disponíveis</p>
@@ -55,7 +89,7 @@ function Card() {
                         <p>Descrição:</p>
                         <p className='ajuste__texto2'>{item.descricao}</p>
                 </div>
-                <button className='card__button'>Se inscrever</button>
+                <button className='card__button' onClick={() => sendIdEvento(item.id)}>Se inscrever</button>
              </div>
            </div>
         </Fragment>

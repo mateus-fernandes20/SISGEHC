@@ -1,7 +1,8 @@
+import { footerProps } from '@/types';
 import './Footer.css'
 import Image from 'next/image';
 
-const Footer = () => {
+const Footer = ({logoUece}: footerProps) => {
 
     return(
         <footer className="rodape">
@@ -11,7 +12,7 @@ const Footer = () => {
                 <p>Governo do Estado do Ceará</p>
                 <p>Todos os direitos reservados</p>
             </div>
-            <Image src="./images/LogoUece.svg" alt='Logo Uece' width={300} height={70}/>
+            {logoUece ? <Image src="./images/LogoUece.svg" alt='Logo Uece' width={300} height={70}/> : <div className='ajuste'></div>}
         </footer>
     );
 }

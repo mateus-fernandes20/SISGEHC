@@ -1,5 +1,6 @@
 export default interface headerProps{
     isLoginScreen?: boolean; 
+    isProfessor?: boolean;
 }
 
 export interface inputProps{
@@ -14,7 +15,7 @@ export interface inputProps{
 export interface buttonProps{
     text: string;
     color: string;
-    pagina: string;
+    pagina?: string;
 }
 
 export interface selectProps{
@@ -54,4 +55,8 @@ export interface inputFileProps {
     name: string;
     text: string;
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
+
+export interface footerProps{
+    logoUece?: boolean;
 }

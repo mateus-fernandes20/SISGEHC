@@ -8,6 +8,7 @@
 .cards{
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 1.4em;
 }
 
 .card__container
@@ -80,6 +81,10 @@
     text-overflow: ellipsis;
     white-space: nowrap;                  
     overflow: hidden; 
+}
+
+.card__modal{
+    background-color: aliceblue;
 }
 
 

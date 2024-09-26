@@ -1,22 +1,17 @@
 .perfil__container{
     display: flex;
-    
+    justify-content: space-between;
+    margin: 10em 8em 5em 8em;
 }
-
-.perfil__image{
-    margin: auto;
-}
-
 
 .perfil__informacao{
     color:  var( --cinza-fonte);
     font-family: var(--kanit);
     font-size: 18px;
-    margin: auto;
 }
 
 .perfil__button{
-    margin-top: 250px;
-    margin-left: 230px;
+   margin-bottom: 4em;
+   margin-top: 3em;
 }
 

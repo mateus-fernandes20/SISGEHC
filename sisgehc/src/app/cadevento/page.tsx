@@ -96,8 +96,10 @@ export default function Cadevento() {
       if (response.ok) {
         const result = await response.json();
         console.log('Evento cadastrado com sucesso:', result);
+        alert("Evento cadastrado com sucesso :)");
       } else {
         console.error('Erro ao cadastrar o evento:', response.statusText);
+        alert("Erro ao cadastrar Evento");
       }
     } catch (error) {
       console.error('Erro na requisição:', error);
@@ -153,7 +155,7 @@ export default function Cadevento() {
             </div>
           </ModalQrcode>
           <div id="buttonDivLeft">
-            <Button text="Voltar" color="" />
+            <Button text="Voltar" color="" pagina='/HomeProfessor'/>
           </div>
         </div>
         <div className="coluna">
@@ -202,7 +204,7 @@ export default function Cadevento() {
             </div>
           </div>
           <div id="buttonDivRight">
-            <Button text="Salvar" color="btn-verde"  />
+            <Button text="Salvar" color="btn-verde"/>
           </div>
         </div>
       </form>

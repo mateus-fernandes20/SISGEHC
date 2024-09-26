@@ -1,12 +1,11 @@
 'use client'
-'use client'
 import headerProps from '@/types';
 import './Header.css'
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
 
-const Header = ({isLoginScreen}:headerProps) =>{
+const Header = ({isLoginScreen, isProfessor}:headerProps) =>{
 
     const router = useRouter();
 
@@ -29,6 +28,23 @@ const Header = ({isLoginScreen}:headerProps) =>{
                 <div className='cabecalho__container2' onClick={handleAlunopage}>
                     <p className='cabecalho__t1'>Aluno</p>
                     <p className='cabecalho__t2'>Perfil do Aluno</p>
+                </div>
+            </header>
+        );
+    }
+    else if(isProfessor){
+        return(
+            <header className='cabecalho'>
+                <div className='cabecalho__container1'>
+                    <p className='cabecalho__t1'>SISGEHC</p>
+                    <div>
+                        <p className='cabecalho__t2'>Sistema de Gerenciamento de Horas</p>
+                        <p className='cabecalho__t2'>Complementares</p>
+                    </div>
+                </div>
+                <div className='cabecalho__container2'>
+                    <p className='cabecalho__t1'>Professor</p>
+                    <p className='cabecalho__t2'>Perfil do Professor</p>
                 </div>
             </header>
         );

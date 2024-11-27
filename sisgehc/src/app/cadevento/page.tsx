@@ -28,7 +28,7 @@ export default function Cadevento() {
   const [logoEvento, setLogoEvento] = useState(null); // Para o arquivo
   const [responsavel, setResponsavel] = useState('');
   const [local, setLocal] = useState('');
-  const [curso, setCurso] = useState<number | null>(null);
+  const [curso, setCurso] = useState<number>(0);
   const [dataInicio, setDataInicio] = useState('');
   const [horaInicio, setHoraInicio] = useState('');
   const [dataFim, setDataFim] = useState('');

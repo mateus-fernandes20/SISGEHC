@@ -12,7 +12,7 @@ export default function Home() {
       <div className="login__container">
         <p className='mainPage__title'>Quem está Acessando?</p>
         <Button color='btn-verdeg' text='Professor' pagina='/HomeProfessor'></Button>
-        <Button color='btn-verdeg' text='Aluno'pagina='HomeAluno'></Button>
+        <Button color='btn-verdeg' text='Aluno'pagina='login'></Button>
       </div>
       <Footer/>
     </>

@@ -7,7 +7,10 @@ export default function Button({text, color, pagina}: buttonProps) {
     const router = useRouter();
  
     const handleButton = () => {
-        router.push(pagina);
+        if(pagina !== undefined)
+        {
+            router.push(pagina)
+        }
     }
 
     return (

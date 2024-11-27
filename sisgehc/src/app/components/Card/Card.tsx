@@ -15,9 +15,9 @@ function Card() {
   
   const handleSubmit = async () => {
     
-    const formData = new FormData();
+    const formData: any = new FormData();
     formData.append('evento', idEvento);
-    formData.append('Aluno', 8 );
+    formData.append('Aluno', 6 );
 
     try {
       const response = await fetch('http://127.0.0.1:8000/inscricao/', {
